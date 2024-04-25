@@ -1,0 +1,53 @@
+server:
+  port: 7777
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  main:
+    allow-circular-references: true
+  datasource:
+    # 本地mysql
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/learn_db?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&nullCatalogMeansCurrent=true&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    hikari:
+      max-lifetime: 120000
+
+##es配置
+#elasticsearch:
+#  # 连接方式
+#  scheme: http
+#  index: content_index_dev
+#  # 集群名称
+#  cluster-name: elasticsearch
+#  # 保存切分
+#  content-length: 1024
+#  #单节点配置一个地址即可
+#  cluster-nodes: 119.84.70.166
+#  port: 19200
+#  #cluster-nodes: 119.84.70.166:19200,119.84.70.166:19200
+#  connection-request-timeout: 500
+#  socket-timeout: 30000
+#  connect-timeout: 1000
+#  repositories:
+#    enabled: true
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+##minio配置
+#minio:
+#  endpoint: http://119.84.70.166:8088
+#  accessKey: 26NDT5LGBS153YJ57OFG
+#  secretKey: PYmo2Oboef7Whx988bSYISOQ6L9qxKr643KgkDvG
+#  bucketName: eap-server-prod
+##临时文件存放目录
+#tempfilepath: /bs/eap-client/temp/
+#
+#api-addr:
+#  dimension: http://119.84.70.166:10030/api/client-auth/org/dimension/list?langCode=chinese
+#  auth-org: http://119.84.70.166:9060/api/client-auth/org/queryTenantTree?dimensionId=&langCode=chinese

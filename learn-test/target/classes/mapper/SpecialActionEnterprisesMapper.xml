@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlv.learn.mapper.SpecialActionEnterprisesMapper">
+
+    <resultMap type="com.mlv.learn.pojo.SpecialActionEnterprises" id="JkztuvSpecialActionEnterprisesMap">
+      <result property="id" column="id" jdbcType="VARCHAR"/>
+      <result property="tenantId" column="tenant_id" jdbcType="VARCHAR"/>
+      <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+      <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+      <result property="creatorId" column="creator_id" jdbcType="VARCHAR"/>
+      <result property="updaterId" column="updater_id" jdbcType="VARCHAR"/>
+      <result property="enterpriseId" column="enterprise_id" jdbcType="VARCHAR"/>
+      <result property="enterpriseName" column="enterprise_name" jdbcType="VARCHAR"/>
+      <result property="enterpriseCode" column="enterprise_code" jdbcType="VARCHAR"/>
+      <result property="enterpriseClass" column="enterprise_class" jdbcType="VARCHAR"/>
+      <result property="enterpriseType" column="enterprise_type" jdbcType="VARCHAR"/>
+      <result property="topEnterpriseId" column="top_enterprise_id" jdbcType="VARCHAR"/>
+      <result property="topEnterpriseName" column="top_enterprise_name" jdbcType="VARCHAR"/>
+      <result property="topEnterpriseCode" column="top_enterprise_code" jdbcType="VARCHAR"/>
+      <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+      <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+      <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+       select
+        id,
+        tenant_id,
+        create_time,
+        update_time,
+        creator_id,
+        updater_id,
+        enterprise_id,
+        enterprise_name,
+        enterprise_code,
+        enterprise_class,
+        enterprise_type,
+        top_enterprise_id,
+        top_enterprise_name,
+        top_enterprise_code,
+        start_time,
+        end_time,
+        remark
+    from jkztuv_special_action_enterprises
+    </sql>
+
+</mapper>
+
